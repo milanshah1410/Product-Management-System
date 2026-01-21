@@ -136,7 +136,6 @@ After seeding, you can login with:
 - Email: `user@gmail.com`
 - Password: `password123`
 
-⚠️ **Change these credentials immediately in production!**
 
 ## 📚 Project Structure
 
