@@ -9,7 +9,6 @@ A robust, enterprise-grade Laravel application implementing CRUD operations, rol
 - ✅ **Role-Based Access Control (RBAC)** - Admin vs Standard User roles
 - ✅ **Product Management (CRUD)** - Full create, read, update, delete operations
 - ✅ **Advanced Search & Filtering** - Optimized full-text search with filters
-- ✅ **Rich Text Editor** - For product descriptions
 - ✅ **Server-Side Validation** - Comprehensive input validation
 
 ### Architecture & Design Patterns
@@ -49,7 +48,7 @@ A robust, enterprise-grade Laravel application implementing CRUD operations, rol
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/laravel-product-management.git
+git clone https://github.com/milanshah1410/Product-Management-System.git
 cd laravel-product-management
 
 # Quick setup
@@ -58,8 +57,20 @@ make install-full
 # Start development server
 make dev
 ```
+### Method 2: Docker Setup
 
-### Method 2: Manual Installation
+```bash
+# Start containers
+docker-compose up -d
+
+# Run migrations inside container
+docker-compose exec app php artisan migrate --seed
+
+# Access application
+http://localhost or http://127.0.0.1:8000
+```
+
+### Method 3: Manual Installation
 
 ```bash
 # Install dependencies
@@ -87,18 +98,7 @@ npm run build
 php artisan serve
 ```
 
-### Method 3: Docker Setup
 
-```bash
-# Start containers
-docker-compose up -d
-
-# Run migrations inside container
-docker-compose exec app php artisan migrate --seed
-
-# Access application
-# http://localhost
-```
 
 ## 🔧 Configuration
 
@@ -162,6 +162,7 @@ app/
 
 database/
 ├── migrations/
+    └── ../
 ├── seeders/
 │   └── RolePermissionSeeder.php       # RBAC setup
 └── factories/
@@ -313,17 +314,10 @@ All important actions are logged:
 - Product deletion
 - Authentication events
 - Authorization failures
-- Error occurrences
+- Error occurrences and custome template
 
 Logs location: `storage/logs/laravel.log`
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
 
 ## 📝 License
 
@@ -336,9 +330,9 @@ This project is licensed under the MIT License.
 - Laravel Breeze
 - TailwindCSS
 
-## 📧 Support
+## 📧 Author
 
-For issues and questions, please open an issue on GitHub or contact support@yourcompany.com
+Milan Shah
 
 ---
 
